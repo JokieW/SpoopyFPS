@@ -1,11 +1,11 @@
 # Spoopy FPS
-This git is for the second project of the preprod class, the SPOOPY FPS! Read this file thoroughly. For any help or whatever, you can contact me quickly by email: [gulliverjko@gmail.com](gulliverjko@gmail.com)
+This git is for the second project of the level design class, the SPOOPY FPS! Read this file thoroughly. For any help or whatever, you can contact me quickly by email: [gulliverjko@gmail.com](gulliverjko@gmail.com)
 
 **I strongly suggest you get to know the project and become familiar with it, don't just assume that you have one task and that's all you have to care about. This is an indie project, everyone is involved, any problem is also yours.**
 
 ##Where stuff is
-- [Github repo](www.github.com)
-- [Trello board](www.trello.org) (todo)
+- [Github repo](https://github.com/JokieW/SpoopyFPS)
+- [Trello board](https://trello.com/b/8RZgyquD/spoopy-fps)
 - [Google Drive docs](www.google.com) (todo)
 
 ## Structure of the project
