@@ -28,16 +28,19 @@ public class Torch : MonoBehaviour {
 			{
 				shrinking = true;
 				nextColor = Color.red;
+				//gameObject.light.color = Color.red;
 			}
 			if(Input.GetKeyDown(KeyCode.Alpha2) && color != Color.blue)
 			{
 				shrinking = true;
 				nextColor = Color.blue;
+				//gameObject.light.color = Color.blue;
 			}
 			if(Input.GetKeyDown(KeyCode.Alpha3) && color != Color.green)
 			{
 				shrinking = true;
 				nextColor = Color.green;
+				//gameObject.light.color = Color.green;
 			}
 
 		}
@@ -47,9 +50,11 @@ public class Torch : MonoBehaviour {
 	{
 		if (transform.localScale.x >= 0) {
 			transform.localScale += new Vector3 (-1.0F, -1.0F, -1.0F);
+			light.range -= 1;
 		} else {
 			color = nextColor;
 			gameObject.renderer.material.color = nextColor;
+			gameObject.light.color = nextColor;
 			shrinking = false;
 			expanding = true;
 		}
@@ -57,8 +62,9 @@ public class Torch : MonoBehaviour {
 
 	void Expand()
 	{
-		if (transform.localScale.x <= 30) {
+		if (transform.localScale.x < 30) {
 			transform.localScale += new Vector3 (+1.0F, +1.0F, +1.0F);
+			light.range += 1;
 		} else {
 			expanding = false;
 		}
