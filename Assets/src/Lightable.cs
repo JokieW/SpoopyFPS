@@ -19,11 +19,11 @@ public class Lightable : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if(red){
-			gameObject.renderer.material = unlitRed;
+			gameObject.GetComponent<Renderer>().material = unlitRed;
 		} else if (blue) {
-			gameObject.renderer.material = unlitBlue;
+			gameObject.GetComponent<Renderer>().material = unlitBlue;
 		} else {
-			gameObject.renderer.material = unlitGreen;
+			gameObject.GetComponent<Renderer>().material = unlitGreen;
 		}
 	}
 
@@ -59,23 +59,23 @@ public class Lightable : MonoBehaviour {
 	{
 		if (light) {
 			if(red){
-				gameObject.renderer.material = litRed;
+				gameObject.GetComponent<Renderer>().material = litRed;
 			} else if (blue) {
-				gameObject.renderer.material = litBlue;
+				gameObject.GetComponent<Renderer>().material = litBlue;
 			} else {
-				gameObject.renderer.material = litGreen;
+				gameObject.GetComponent<Renderer>().material = litGreen;
 			}
 
-			collider.isTrigger = false;
+			GetComponent<Collider>().isTrigger = false;
 		} else {
 			if(red){
-				gameObject.renderer.material = unlitRed;
+				gameObject.GetComponent<Renderer>().material = unlitRed;
 			} else if (blue) {
-				gameObject.renderer.material = unlitBlue;
+				gameObject.GetComponent<Renderer>().material = unlitBlue;
 			} else {
-				gameObject.renderer.material = unlitGreen;
+				gameObject.GetComponent<Renderer>().material = unlitGreen;
 			}
-			collider.isTrigger = true;
+			GetComponent<Collider>().isTrigger = true;
 		}
 	}
 }

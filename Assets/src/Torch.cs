@@ -13,7 +13,7 @@ public class Torch : MonoBehaviour {
 	void Start ()
 	{
 		color = Color.red;
-		gameObject.renderer.material.color = color;
+		gameObject.GetComponent<Renderer>().material.color = color;
 	}
 
 	void Update ()
@@ -50,11 +50,11 @@ public class Torch : MonoBehaviour {
 	{
 		if (transform.localScale.x >= 0) {
 			transform.localScale += new Vector3 (-1.0F, -1.0F, -1.0F);
-			light.range -= 1;
+			GetComponent<Light>().range -= 1;
 		} else {
 			color = nextColor;
-			gameObject.renderer.material.color = nextColor;
-			gameObject.light.color = nextColor;
+			gameObject.GetComponent<Renderer>().material.color = nextColor;
+			gameObject.GetComponent<Light>().color = nextColor;
 			shrinking = false;
 			expanding = true;
 		}
@@ -64,7 +64,7 @@ public class Torch : MonoBehaviour {
 	{
 		if (transform.localScale.x < 30) {
 			transform.localScale += new Vector3 (+1.0F, +1.0F, +1.0F);
-			light.range += 1;
+			GetComponent<Light>().range += 1;
 		} else {
 			expanding = false;
 		}
