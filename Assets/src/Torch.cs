@@ -6,6 +6,8 @@ public class Torch : MonoBehaviour {
 	public Color color = new Color(0, 0, 0);
 	private Color nextColor = new Color(0, 0, 0);
 
+	private int colorIndex = 0;
+
 	bool shrinking = false;
 	bool expanding = false;
 
@@ -18,6 +20,8 @@ public class Torch : MonoBehaviour {
 
 	void Update ()
 	{
+		gameObject.GetComponent<Renderer>().sharedMaterial.SetInt("_TorchColor", colorIndex);
+
 		if (shrinking) {
 			Shrink();
 		} else if (expanding) {
@@ -28,18 +32,21 @@ public class Torch : MonoBehaviour {
 			{
 				shrinking = true;
 				nextColor = Color.red;
+				colorIndex = 0;
 				//gameObject.light.color = Color.red;
 			}
 			if(Input.GetKeyDown(KeyCode.Alpha2) && color != Color.blue)
 			{
 				shrinking = true;
 				nextColor = Color.blue;
+				colorIndex = 1;
 				//gameObject.light.color = Color.blue;
 			}
 			if(Input.GetKeyDown(KeyCode.Alpha3) && color != Color.green)
 			{
 				shrinking = true;
 				nextColor = Color.green;
+				colorIndex = 2;
 				//gameObject.light.color = Color.green;
 			}
 
