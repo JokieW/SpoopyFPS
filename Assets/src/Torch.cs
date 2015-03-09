@@ -6,7 +6,7 @@ public class Torch : MonoBehaviour {
 	public Color color = new Color(0, 0, 0);
 	private Color nextColor = new Color(0, 0, 0);
 
-	private int colorIndex = 0;
+	public int colorIndex = 0;
 
 	bool shrinking = false;
 	bool expanding = false;
@@ -14,13 +14,13 @@ public class Torch : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+
 		color = Color.red;
 		gameObject.GetComponent<Renderer>().material.color = color;
 	}
 
 	void Update ()
 	{
-		gameObject.GetComponent<Renderer>().sharedMaterial.SetInt("_TorchColor", colorIndex);
 
 		if (shrinking) {
 			Shrink();
@@ -51,6 +51,11 @@ public class Torch : MonoBehaviour {
 			}
 
 		}
+	}
+
+	public int GetColorIndex()
+	{
+		return colorIndex;
 	}
 
 	void Shrink()
