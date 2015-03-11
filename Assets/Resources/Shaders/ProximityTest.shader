@@ -2,7 +2,6 @@
     Properties {
         _MainTex ("Base (RGB)", 2D) = "white" {} // Regular object texture
         _PlayerPosition ("Player Position", vector) = (0,0,0,0) // The location of the player - will be set by script
-        _TorchColor ("Torch Color", int) = 0 // The color of the torch
         _VisibilityIndex ("Invisibility Index", int) = 0 // The color it reacts to
         _VisibleDistance ("Visibility Distance", float) = 10.0 // How close does the player have to be to make object visible
         _OutlineWidth ("Outline Width", float) = 3.0 // Used to add an outline around visible area a la Mario Galaxy
@@ -20,7 +19,6 @@
         // Access the shaderlab properties
         uniform sampler2D _MainTex;
         uniform float4 _PlayerPosition;
-        uniform int _TorchColor;
         uniform int _VisibilityIndex;
         uniform float _VisibleDistance;
         uniform float _OutlineWidth;
@@ -55,7 +53,7 @@
             float dist = distance(input.position_in_world_space, _PlayerPosition);
   
             // Return appropriate colour
-            if (dist < _VisibleDistance && _TorchColor == _VisibilityIndex) {
+            if (dist < _VisibleDistance) {
                 return tex2D(_MainTex, float2(input.tex.xy)); // Visible
             }
             else if (dist < _VisibleDistance + _OutlineWidth) {
