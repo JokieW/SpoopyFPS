@@ -22,12 +22,12 @@ public class TorchesManager : MonoBehaviour
 
     private List<Torch> torches = new List<Torch>();
 
-    void Start()
-    {
-        torches.Add(redTorch);
-        torches.Add(blueTorch);
-        torches.Add(greenTorch);
-    }
+	void Awake()
+	{
+		torches.Add(redTorch);
+		torches.Add(blueTorch);
+		torches.Add(greenTorch);
+	}
 
     void Update()
     {
@@ -127,11 +127,11 @@ public class TorchesManager : MonoBehaviour
 
     public Torch getBlueTorch()
     {
-        return torches[1];
+		return torches[1];
     }
 
     public Torch getGreenTorch()
     {
-        return torches[2];
+		return torches[2];
     }
 }
