@@ -4,9 +4,9 @@ using System.Collections;
 public class Torch : MonoBehaviour {
 	
 	public Color color = new Color(0, 0, 0);
-	private Color nextColor = new Color(0, 0, 0);
+	public KeyCode keyCode;
 
-	public int colorIndex = 0;
+	private bool on = false;
 
 	bool shrinking = false;
 	bool expanding = false;
@@ -14,9 +14,33 @@ public class Torch : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-
-		color = Color.red;
 		gameObject.GetComponent<Renderer>().material.color = color;
+	}
+
+    public void Activate()
+    {
+        if (on)
+        {
+            shrinking = true;
+        }
+        else
+        {
+            expanding = true;
+        }
+    }
+
+	public void TurnOn()
+	{
+		if (!on) {
+			expanding = true;
+		}
+	}
+
+	public void TurnOff()
+	{
+		if (on && !IsDropped()) {
+			shrinking = true;
+		}
 	}
 
 	void Update ()
@@ -26,36 +50,7 @@ public class Torch : MonoBehaviour {
 			Shrink();
 		} else if (expanding) {
 			Expand();
-		} else {
-
-			if(Input.GetKeyDown(KeyCode.Alpha1) && color != Color.red)
-			{
-				shrinking = true;
-				nextColor = Color.red;
-				colorIndex = 0;
-				//gameObject.light.color = Color.red;
-			}
-			if(Input.GetKeyDown(KeyCode.Alpha2) && color != Color.blue)
-			{
-				shrinking = true;
-				nextColor = Color.blue;
-				colorIndex = 1;
-				//gameObject.light.color = Color.blue;
-			}
-			if(Input.GetKeyDown(KeyCode.Alpha3) && color != Color.green)
-			{
-				shrinking = true;
-				nextColor = Color.green;
-				colorIndex = 2;
-				//gameObject.light.color = Color.green;
-			}
-
 		}
-	}
-
-	public int GetColorIndex()
-	{
-		return colorIndex;
 	}
 
 	void Shrink()
@@ -64,11 +59,8 @@ public class Torch : MonoBehaviour {
 			transform.localScale += new Vector3 (-1.0F, -1.0F, -1.0F);
 			GetComponent<Light>().range -= 1;
 		} else {
-			color = nextColor;
-			gameObject.GetComponent<Renderer>().material.color = nextColor;
-			gameObject.GetComponent<Light>().color = nextColor;
 			shrinking = false;
-			expanding = true;
+			on = false;
 		}
 	}
 
@@ -79,6 +71,34 @@ public class Torch : MonoBehaviour {
 			GetComponent<Light>().range += 1;
 		} else {
 			expanding = false;
+			on = true;
 		}
 	}
+
+	public bool IsDropped()
+	{
+		return (transform.parent == null) ? true : false;
+	}
+
+	public void Drop()
+	{
+		transform.parent = null;
+	}
+
+	public void PickUp(Transform parent)
+	{
+		transform.parent = parent;
+		transform.position = parent.position;
+		transform.rotation = parent.rotation;
+	}
+
+	public bool IsOn()
+	{
+		return on;
+	}
+
+    public bool IsReady()
+    {
+        return (!expanding && !shrinking) ? (true) : (false);
+    }
 }

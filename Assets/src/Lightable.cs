@@ -7,23 +7,28 @@ public class Lightable : MonoBehaviour {
 	public bool blue = false;
 	public bool green = false;
 
-	// Use this for initialization
-	void Start () {
+	private Torch torch;
+
+	private TorchesManager torches;
+
+	void Start()
+	{
+		torches = GameObject.FindGameObjectWithTag ("TorchesManager").GetComponent<TorchesManager>() as TorchesManager;
+		if (red) {
+			torch = torches.getRedTorch();
+		} else if (blue) {
+			torch = torches.getBlueTorch();
+		} else if (green) {
+			torch = torches.getGreenTorch();
+		}
+		//Debug.Log (torches);
 	}
 
 	void OnTriggerEnter(Collider collider) {
 		if (collider.gameObject.tag == "Torch")
 		{
-			Torch torch = collider.gameObject.GetComponent("Torch") as Torch;
-			if(torch.color == Color.red && red)
-			{
-				Illuminate(true);
-			}
-			if(torch.color == Color.blue && blue)
-			{
-				Illuminate(true);
-			}
-			if(torch.color == Color.green && green)
+			Torch collidedTorch = collider.gameObject.GetComponent("Torch") as Torch;
+			if(collidedTorch == torch)
 			{
 				Illuminate(true);
 			}
@@ -32,9 +37,19 @@ public class Lightable : MonoBehaviour {
 
 	void OnTriggerExit(Collider collider)
 	{
-		if (collider.gameObject.tag == "Torch")
+		Torch collidedTorch = collider.gameObject.GetComponent("Torch") as Torch;
+		if(collidedTorch == torch)
 		{
 			Illuminate(false);
+		}
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if (torch != null) {
+			// Pass the player location to the shader
+			GetComponent<Renderer>().sharedMaterial.SetVector("_PlayerPosition", torch.transform.position);
+			GetComponent<Renderer>().sharedMaterial.SetFloat("_VisibleDistance", (torch.transform.localScale.x / 2));
 		}
 	}
 

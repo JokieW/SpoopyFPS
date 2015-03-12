@@ -50,6 +50,7 @@
      <Compile Include="Assets\src\FPSInputController.js" />
      <Compile Include="Assets\src\Proximity.js" />
      <None Include="Assets\Resources\Shaders\ProximityTest.shader" />
+     <None Include="Assets\Resources\Shaders\AlphaCutoff.shader" />
      <None Include="Assets\Resources\Shaders\PointLight.shader" />
      <None Include="Assets\Resources\Shaders\Proximity.shader" />
  <Reference Include="UnityEngine.UI">
