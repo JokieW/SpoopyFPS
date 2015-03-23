@@ -3,7 +3,6 @@ using System.Collections;
 
 public class CharacterLight : MonoBehaviour 
 {
-    public MeshRenderer render, render1, render2;
 	void Start () 
     {
 	
@@ -28,8 +27,5 @@ public class CharacterLight : MonoBehaviour
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
-        render.sharedMaterial.SetVector("_PlayerPosition", transform.position);
-        render1.sharedMaterial.SetVector("_PlayerPosition", transform.position);
-        render2.sharedMaterial.SetVector("_PlayerPosition", transform.position);
 	}
 }
