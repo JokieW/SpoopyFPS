@@ -98,7 +98,7 @@ Shader "Light Aware/LightShader" {
                 float3 lightColor = _LightColor0.rgb;
 ////// Lighting:
                 
-                float3 attenColor = attenuation * _LightColor0.xyz;
+                float3 attenColor = attenuation;// * _LightColor0.xyz;
 /////// Diffuse:
                 float NdotL = max(0.0,dot( normalDirection, lightDirection ));
                 float3 directDiffuse = max( 0.0, NdotL) * attenColor;

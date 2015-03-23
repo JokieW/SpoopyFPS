@@ -32,6 +32,7 @@ public class Torch : MonoBehaviour {
 	public void TurnOn()
 	{
 		if (!on) {
+            GetComponent<Light>().enabled = true;
 			expanding = true;
 		}
 	}
@@ -39,6 +40,7 @@ public class Torch : MonoBehaviour {
 	public void TurnOff()
 	{
 		if (on && !IsDropped()) {
+            GetComponent<Light>().enabled = false;
 			shrinking = true;
 		}
 	}
