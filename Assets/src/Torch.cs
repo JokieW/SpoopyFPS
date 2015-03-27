@@ -90,6 +90,7 @@ public class Torch : MonoBehaviour {
 	{
 		transform.parent = null;
 		model.SetActive (true);
+		GetComponent<Rigidbody>().isKinematic = false;
 	}
 
 	public void PickUp(Transform parent)
@@ -98,6 +99,7 @@ public class Torch : MonoBehaviour {
 		transform.position = parent.position;
 		transform.rotation = parent.rotation;
 		model.SetActive (false);
+		GetComponent<Rigidbody>().isKinematic = true;
 	}
 
 	public bool IsOn()
