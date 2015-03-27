@@ -1,10 +1,8 @@
 Shader "Light Aware/LightShader" {
     Properties {
         _MainTex ("Main Texture", 2D) = "white" {}
-		_TileTexture ("Tile Texture", 2D) = "white" {}
 		_HighCutoff ("Hard Cutoff", Range(0, 1)) = 0.7
         _LowCutoff ("Dithering Cutoff", Range(0, 1)) = 0.4
-		_TileDither ("Use dithering instead of tiles", Range(0, 1)) = 0
         _Opacity ("Tile Opacity", Range(0, 1)) = 1
         _TileColor ("Tile Color", Color) = (0.8,0,0,1)
         [HideInInspector]_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
@@ -244,10 +242,8 @@ Shader "Light Aware/LightShader" {
                 float2 pxMult = float2( dot(mtx[0],yVec), dot(mtx[1],yVec) );
                 return round(value + dot(pxMult, xVec));
             }
-            uniform sampler2D _TileTexture; uniform float4 _TileTexture_ST;
             uniform float _TileOpacity;
 			uniform float _HighCutoff;
-			uniform float _TileDither;
             uniform float4 _TileColor;
             struct VertexInput {
                 float4 vertex : POSITION;
@@ -286,26 +282,17 @@ Shader "Light Aware/LightShader" {
                 float screenImin = (-1.0);
                 float screenOmin = 0.0;
                 float2 uvRemap = (screenOmin + ( (float2(i.screenPos.x*(_ScreenParams.r/_ScreenParams.g), i.screenPos.y).rg - screenImin) * ((_ScreenParams.g/4.0) - screenOmin) ) / (1.0 - screenImin));
-                float4 _TileTexture_var = tex2D(_TileTexture,TRANSFORM_TEX(uvRemap, _TileTexture));
-				float val = lerp((ifA*node_574)+(ifB*(_TileTexture_var.a*step(max(0,dot(normalize(lerp(_WorldSpaceLightPos0.rgb,(_WorldSpaceLightPos0.rgb-i.posWorld.rgb),_WorldSpaceLightPos0.a)),i.normalDir)),node_574))),node_574,ifA*ifB) - 0.5;
+				float val = lerp((ifA*node_574)+(ifB*(step(max(0,dot(normalize(lerp(_WorldSpaceLightPos0.rgb,(_WorldSpaceLightPos0.rgb-i.posWorld.rgb),_WorldSpaceLightPos0.a)),i.normalDir)),node_574))),node_574,ifA*ifB) - 0.5;
                 float3 finalColor;
-				if(_TileDither > 0)
+				if(val >= 0.5)
 				{
-					if(val >= 0.5)
-					{
-						clip(BinaryDither2x2(-1.2, sceneUVs));
-					}
-					else
-					{
-						clip(-1);
-					}
-					finalColor = _TileColor.rgb;
+					clip(BinaryDither2x2(-1.2, sceneUVs));
 				}
 				else
 				{
-					clip(val);
-					finalColor = _TileColor.rgb * _TileTexture_var.rgb;
+					clip(-1);
 				}
+				finalColor = _TileColor.rgb;
                 return fixed4(finalColor ,_TileOpacity);
             }
             ENDCG

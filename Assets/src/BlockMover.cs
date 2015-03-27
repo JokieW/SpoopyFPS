@@ -19,7 +19,7 @@ public class BlockMover : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        float t = (Time.time - _startTime)%cycleTime;
-        transform.position = Vector3.Lerp(pointA, pointB, curve.Evaluate(t / cycleTime));
+        float t = (Time.time - _startTime) % cycleTime;
+        transform.position = Vector3.Lerp (pointA, pointB, curve.Evaluate(t / cycleTime));
 	}
 }

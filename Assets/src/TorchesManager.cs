@@ -5,13 +5,12 @@ using System.Collections.Generic;
 public class TorchesManager : MonoBehaviour
 {
 
-    public Torch redTorch;
-    public Torch blueTorch;
-    public Torch greenTorch;
+    private List<Torch> _torches = new List<Torch>();
 
     public KeyCode redKeyCode;
     public KeyCode blueKeyCode;
     public KeyCode greenKeyCode;
+    public KeyCode turnoffCode;
 
 	public KeyCode dropKey;
 	public KeyCode pickUpKey;
@@ -20,13 +19,11 @@ public class TorchesManager : MonoBehaviour
 
 	public float pickUpRange = 3.0f;
 
-    private List<Torch> torches = new List<Torch>();
+    private Torch _selected;
 
 	void Awake()
 	{
-		torches.Add(redTorch);
-		torches.Add(blueTorch);
-		torches.Add(greenTorch);
+        _selected = null;
 	}
 
     void Update()
@@ -35,49 +32,23 @@ public class TorchesManager : MonoBehaviour
         {
             if (Input.GetKeyDown(redKeyCode))
             {
-				if(torches[0].IsOn())
-				{
-					torches[0].TurnOff();
-					activeTorch = -1;
-				} else {
-					torches[0].TurnOn();
-					activeTorch = 0;
-					torches[1].TurnOff();
-					torches[2].TurnOff();
-				}
+                //SetTorch(redTorch);
             }
             else if (Input.GetKeyDown(blueKeyCode))
             {
-				if(torches[1].IsOn())
-				{
-					torches[1].TurnOff();
-					activeTorch = -1;
-				} else {
-					torches[1].TurnOn();
-					activeTorch = 1;
-					torches[0].TurnOff();
-					torches[2].TurnOff();
-				}
+                //SetTorch(blueTorch);
             }
             else if (Input.GetKeyDown(greenKeyCode))
             {
-				if(torches[2].IsOn())
-				{
-					torches[2].TurnOff();
-					activeTorch = -1;
-				} else {
-					torches[2].TurnOn();
-					activeTorch = 2;
-					torches[0].TurnOff();
-					torches[1].TurnOff();
-				}
+                //SetTorch(redTorch);
+            }
+            else if (Input.GetKeyDown(turnoffCode))
+            {
+                SetTorch(null);
             }
 			else if (Input.GetKeyDown(dropKey))
 			{
-				if(activeTorch != -1)
-				{
-					Drop(activeTorch);
-				}
+			    Drop();
 			}
 			else if (Input.GetKeyDown(pickUpKey))
 			{
@@ -87,14 +58,33 @@ public class TorchesManager : MonoBehaviour
 
     }
 
-	public void Drop(int torch)
+    public AddTorch(Torch )
+
+    //private Torch GetTorch() { }
+
+    public void SetTorch(Torch torch)
+    {
+        if (_selected != null)
+        {
+            _selected.TurnOff();
+        }
+
+        _selected = torch;
+        if (_selected != null)
+        {
+            _selected.TurnOn();
+        }
+    }
+
+	public void Drop()
 	{
-		torches[torch].Drop();
+        //if(tor)
+		//torches[torch].Drop();
 	}
 
 	public void PickUp()
 	{
-		foreach (Torch torch in torches)
+		/*foreach (Torch torch in torches)
 		{
 			if(torch.IsDropped() && Vector3.Distance(transform.position, torch.transform.position) <= pickUpRange)
 			{
@@ -104,23 +94,23 @@ public class TorchesManager : MonoBehaviour
 					torch.TurnOff();
 				}
 			}
-		}
+		}*/
 	}
 
     public bool TorchesReady()
     {
         bool ready = true;
-        foreach (Torch torch in torches)
+        /*foreach (Torch torch in torches)
         {
             if(!torch.IsReady())
             {
                 ready = false;
             }
-        }
+        }*/
         return ready;
     }
 
-    public Torch getRedTorch()
+    /*public Torch getRedTorch()
     {
         return torches[0];
     }
@@ -133,5 +123,5 @@ public class TorchesManager : MonoBehaviour
     public Torch getGreenTorch()
     {
 		return torches[2];
-    }
+    }*/
 }
