@@ -13,6 +13,8 @@ public class Torch : MonoBehaviour {
 
 	public GameObject model;
 
+	public GameObject glow;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -34,7 +36,9 @@ public class Torch : MonoBehaviour {
 	public void TurnOn()
 	{
 		if (!on) {
-            GetComponent<Light>().enabled = true;
+            //GetComponent<Light>().enabled = true;
+			glow.SetActive(true);
+			Debug.Log("SUPOSER MARCHER");
 			expanding = true;
 		}
 	}
@@ -43,6 +47,7 @@ public class Torch : MonoBehaviour {
 	{
 		if (on && !IsDropped()) {
             //GetComponent<Light>().enabled = false;
+			glow.SetActive(false);
 			shrinking = true;
 		}
 	}
@@ -90,16 +95,16 @@ public class Torch : MonoBehaviour {
 	{
 		transform.parent = null;
 		model.SetActive (true);
-		GetComponent<Rigidbody>().isKinematic = false;
+		//GetComponent<Rigidbody>().isKinematic = false;
 	}
 
 	public void PickUp(Transform parent)
 	{
 		transform.parent = parent;
-		transform.position = parent.position;
 		transform.rotation = parent.rotation;
+		transform.position = parent.position;
 		model.SetActive (false);
-		GetComponent<Rigidbody>().isKinematic = true;
+		//GetComponent<Rigidbody>().isKinematic = true;
 	}
 
 	public bool IsOn()

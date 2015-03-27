@@ -72,13 +72,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore-Unity5">
- <HintPath>C:/Users/YanSimon/Documents/GitHub/SpoopyFPS/Assets/Plugins/ProCore/Prototype/Classes/ProBuilderCore-Unity5.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/GitHub/SpoopyFPS/Assets/Plugins/ProCore/Prototype/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>C:/Users/YanSimon/Documents/GitHub/SpoopyFPS/Assets/Plugins/ProCore/Prototype/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/GitHub/SpoopyFPS/Assets/Plugins/ProCore/Prototype/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="ProCore">
- <HintPath>C:/Users/YanSimon/Documents/GitHub/SpoopyFPS/Assets/Plugins/ProCore/Shared/Code/ProCore.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/GitHub/SpoopyFPS/Assets/Plugins/ProCore/Shared/Code/ProCore.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
