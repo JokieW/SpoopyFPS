@@ -11,6 +11,8 @@ public class Torch : MonoBehaviour {
 	bool shrinking = false;
 	bool expanding = false;
 
+	public GameObject model;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -87,6 +89,7 @@ public class Torch : MonoBehaviour {
 	public void Drop()
 	{
 		transform.parent = null;
+		model.SetActive (true);
 	}
 
 	public void PickUp(Transform parent)
@@ -94,6 +97,7 @@ public class Torch : MonoBehaviour {
 		transform.parent = parent;
 		transform.position = parent.position;
 		transform.rotation = parent.rotation;
+		model.SetActive (false);
 	}
 
 	public bool IsOn()

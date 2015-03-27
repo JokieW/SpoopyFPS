@@ -3,9 +3,16 @@ using System.Collections;
 
 public class CharacterColor : MonoBehaviour {
 
-    bool red = false;
-    bool blue = false;
-    bool green = false;
+//  public bool red = false;
+//	public bool blue = false;
+//	public bool green = false;
+
+	public int redSources = 0;
+	public int blueSources = 0;
+	public int greenSources = 0;
+	//int red = 0;
+	//int blue = 0;
+	//int green = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -18,15 +25,21 @@ public class CharacterColor : MonoBehaviour {
 
 			if(torch.color == Color.red)
 			{
-                red = true;
+                //red = true;
+				redSources++;
+				//red++;
 			}
 			if(torch.color == Color.blue)
 			{
-                blue = true;
+                //blue = true;
+				blueSources++;
+				//blue++;
 			}
 			if(torch.color == Color.green)
 			{
-                green = true;
+                //green = true;
+				greenSources++;
+				//green++;
 			}
 
             SetCollisionLayer();
@@ -41,15 +54,21 @@ public class CharacterColor : MonoBehaviour {
 
             if (torch.color == Color.red)
             {
-                red = false;
+                //red = false;
+				redSources--;
+				//red--;
             }
             if (torch.color == Color.blue)
             {
-                blue = false;
+                //blue = false;
+				blueSources--;
+				//blue--;
             }
             if (torch.color == Color.green)
             {
-                green = false;
+                //green = false;
+				greenSources--;
+				//green--;
             }
 
             SetCollisionLayer();
@@ -58,6 +77,7 @@ public class CharacterColor : MonoBehaviour {
 
     void SetCollisionLayer()
     {
+		/*
         if(red && blue && green)
         {
             gameObject.layer = 16;
@@ -86,6 +106,39 @@ public class CharacterColor : MonoBehaviour {
         {
             gameObject.layer = 10;
         }
+		else
+		{
+			gameObject.layer = 12;
+		}*/
+
+		if(redSources > 0 && blueSources > 0 && greenSources > 0)
+		{
+			gameObject.layer = 16;
+		}
+		else if (redSources > 0 && blueSources > 0)
+		{
+			gameObject.layer = 13;
+		}
+		else if (redSources > 0 && greenSources > 0)
+		{
+			gameObject.layer = 14;
+		}
+		else if (blueSources > 0 && greenSources > 0)
+		{
+			gameObject.layer = 15;
+		}
+		else if (redSources > 0)
+		{
+			gameObject.layer = 8;
+		}
+		else if (blueSources > 0)
+		{
+			gameObject.layer = 9;
+		}
+		else if (greenSources > 0)
+		{
+			gameObject.layer = 10;
+		}
 		else
 		{
 			gameObject.layer = 12;
