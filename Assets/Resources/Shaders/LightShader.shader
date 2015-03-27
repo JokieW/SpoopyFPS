@@ -100,8 +100,8 @@ Shader "Light Aware/LightShader" {
                 
                 float3 attenColor = attenuation;// * _LightColor0.xyz;
 /////// Diffuse:
-                float NdotL = max(0.0,dot( normalDirection, lightDirection ));
-                float3 directDiffuse = max( 0.0, NdotL) * attenColor;
+                float NdotL = max(0.0,dot( normalDirection, normalDirection ));
+                float3 directDiffuse =/* max( 0.0, NdotL)*/NdotL * attenColor;
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
                 float3 diffuseColor = _MainTex_var.rgb;
                 float3 diffuse = directDiffuse * diffuseColor;
