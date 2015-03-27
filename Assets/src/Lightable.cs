@@ -57,10 +57,10 @@ public class Lightable : MonoBehaviour {
 	{
 		if (light) {
 			GetComponent<Collider>().isTrigger = false;
-            GetComponent<Renderer>().enabled = true;
+            //GetComponent<Renderer>().enabled = true;
 		} else {
 			GetComponent<Collider>().isTrigger = true;
-            GetComponent<Renderer>().enabled = false;
+            //GetComponent<Renderer>().enabled = false;
 		}
 	}
 }

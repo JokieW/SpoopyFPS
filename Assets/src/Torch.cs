@@ -40,7 +40,7 @@ public class Torch : MonoBehaviour {
 	public void TurnOff()
 	{
 		if (on && !IsDropped()) {
-            GetComponent<Light>().enabled = false;
+            //GetComponent<Light>().enabled = false;
 			shrinking = true;
 		}
 	}
@@ -59,7 +59,8 @@ public class Torch : MonoBehaviour {
 	{
 		if (transform.localScale.x >= 0) {
 			transform.localScale += new Vector3 (-1.0F, -1.0F, -1.0F);
-			GetComponent<Light>().range -= 1;
+			//GetComponent<Light>().range -= 1;
+			GetComponent<Light>().range = transform.localScale.x / 2;
 		} else {
 			shrinking = false;
 			on = false;
@@ -68,9 +69,10 @@ public class Torch : MonoBehaviour {
 
 	void Expand()
 	{
-		if (transform.localScale.x < 30) {
+		if (transform.localScale.x < 90) {
 			transform.localScale += new Vector3 (+1.0F, +1.0F, +1.0F);
-			GetComponent<Light>().range += 1;
+			//GetComponent<Light>().range += 1;
+			GetComponent<Light>().range = transform.localScale.x / 2;
 		} else {
 			expanding = false;
 			on = true;

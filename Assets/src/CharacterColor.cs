@@ -86,5 +86,9 @@ public class CharacterColor : MonoBehaviour {
         {
             gameObject.layer = 10;
         }
+		else
+		{
+			gameObject.layer = 12;
+		}
     }
 }
