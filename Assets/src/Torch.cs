@@ -37,7 +37,7 @@ public class Torch : MonoBehaviour {
 	{
 		if (!on) {
             //GetComponent<Light>().enabled = true;
-			glow.SetActive(true);
+			//glow.SetActive(true);
 			Debug.Log("SUPOSER MARCHER");
 			expanding = true;
 		}
@@ -94,6 +94,7 @@ public class Torch : MonoBehaviour {
 	public void Drop()
 	{
 		transform.parent = null;
+		transform.position = new Vector3 (transform.position.x, transform.position.y - 4, transform.position.z);
 		model.SetActive (true);
 		//GetComponent<Rigidbody>().isKinematic = false;
 	}
