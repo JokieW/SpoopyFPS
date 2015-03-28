@@ -1,0 +1,680 @@
+fileFormatVersion: 2
+guid: b310e78f0ef960944b4646aaa524b375
+timeCreated: 1427520479
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: blue
+    100002: blue_lit
+    100004: CATRigHub001
+    100006: CATRigLArm1
+    100008: CATRigLArm2
+    100010: CATRigLArmCollarbone
+    100012: CATRigLArmDigit11
+    100014: CATRigLArmDigit12
+    100016: CATRigLArmDigit13
+    100018: CATRigLArmDigit21
+    100020: CATRigLArmDigit22
+    100022: CATRigLArmDigit23
+    100024: CATRigLArmDigit31
+    100026: CATRigLArmDigit32
+    100028: CATRigLArmDigit33
+    100030: CATRigLArmDigit41
+    100032: CATRigLArmDigit42
+    100034: CATRigLArmDigit43
+    100036: CATRigLArmPalm
+    100038: Character001
+    100040: claw
+    100042: green
+    100044: green_lit
+    100046: handle
+    100048: lamp
+    100050: //RootNode
+    100052: red
+    100054: red_lit
+    100056: separators
+    100058: separators_lit
+    400000: blue
+    400002: blue_lit
+    400004: CATRigHub001
+    400006: CATRigLArm1
+    400008: CATRigLArm2
+    400010: CATRigLArmCollarbone
+    400012: CATRigLArmDigit11
+    400014: CATRigLArmDigit12
+    400016: CATRigLArmDigit13
+    400018: CATRigLArmDigit21
+    400020: CATRigLArmDigit22
+    400022: CATRigLArmDigit23
+    400024: CATRigLArmDigit31
+    400026: CATRigLArmDigit32
+    400028: CATRigLArmDigit33
+    400030: CATRigLArmDigit41
+    400032: CATRigLArmDigit42
+    400034: CATRigLArmDigit43
+    400036: CATRigLArmPalm
+    400038: Character001
+    400040: claw
+    400042: green
+    400044: green_lit
+    400046: handle
+    400048: lamp
+    400050: //RootNode
+    400052: red
+    400054: red_lit
+    400056: separators
+    400058: separators_lit
+    2300000: blue
+    2300002: blue_lit
+    2300004: green
+    2300006: green_lit
+    2300008: handle
+    2300010: lamp
+    2300012: red
+    2300014: red_lit
+    2300016: separators
+    2300018: separators_lit
+    3300000: blue
+    3300002: blue_lit
+    3300004: green
+    3300006: green_lit
+    3300008: handle
+    3300010: lamp
+    3300012: red
+    3300014: red_lit
+    3300016: separators
+    3300018: separators_lit
+    4300000: claw
+    4300002: handle
+    4300004: red
+    4300006: separators
+    4300008: lamp
+    4300010: red_lit
+    4300012: green
+    4300014: separators_lit
+    4300016: blue
+    4300018: blue_lit
+    4300020: green_lit
+    7400000: BLUEtoRED
+    7400002: RED
+    7400004: REDtoGREEN
+    7400006: GREEN
+    7400008: GREENtoBLUE
+    7400010: BLUE
+    9500000: //RootNode
+    13700000: claw
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: BLUEtoRED
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigHub001
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12/CATRigLArmDigit13
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22/CATRigLArmDigit23
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32/CATRigLArmDigit33
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42/CATRigLArmDigit43
+        weight: 1
+      - path: Character001
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw/blue
+        weight: 1
+      - path: claw/blue_lit
+        weight: 1
+      - path: claw/green
+        weight: 1
+      - path: claw/green_lit
+        weight: 1
+      - path: claw/handle
+        weight: 1
+      - path: claw/lamp
+        weight: 1
+      - path: claw/red
+        weight: 1
+      - path: claw/red_lit
+        weight: 1
+      - path: claw/separators
+        weight: 1
+      - path: claw/separators_lit
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: RED
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigHub001
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12/CATRigLArmDigit13
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22/CATRigLArmDigit23
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32/CATRigLArmDigit33
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42/CATRigLArmDigit43
+        weight: 1
+      - path: Character001
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw/blue
+        weight: 1
+      - path: claw/blue_lit
+        weight: 1
+      - path: claw/green
+        weight: 1
+      - path: claw/green_lit
+        weight: 1
+      - path: claw/handle
+        weight: 1
+      - path: claw/lamp
+        weight: 1
+      - path: claw/red
+        weight: 1
+      - path: claw/red_lit
+        weight: 1
+      - path: claw/separators
+        weight: 1
+      - path: claw/separators_lit
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: REDtoGREEN
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigHub001
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12/CATRigLArmDigit13
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22/CATRigLArmDigit23
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32/CATRigLArmDigit33
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42/CATRigLArmDigit43
+        weight: 1
+      - path: Character001
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw/blue
+        weight: 1
+      - path: claw/blue_lit
+        weight: 1
+      - path: claw/green
+        weight: 1
+      - path: claw/green_lit
+        weight: 1
+      - path: claw/handle
+        weight: 1
+      - path: claw/lamp
+        weight: 1
+      - path: claw/red
+        weight: 1
+      - path: claw/red_lit
+        weight: 1
+      - path: claw/separators
+        weight: 1
+      - path: claw/separators_lit
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: GREEN
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigHub001
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12/CATRigLArmDigit13
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22/CATRigLArmDigit23
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32/CATRigLArmDigit33
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42/CATRigLArmDigit43
+        weight: 1
+      - path: Character001
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw/blue
+        weight: 1
+      - path: claw/blue_lit
+        weight: 1
+      - path: claw/green
+        weight: 1
+      - path: claw/green_lit
+        weight: 1
+      - path: claw/handle
+        weight: 1
+      - path: claw/lamp
+        weight: 1
+      - path: claw/red
+        weight: 1
+      - path: claw/red_lit
+        weight: 1
+      - path: claw/separators
+        weight: 1
+      - path: claw/separators_lit
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: GREENtoBLUE
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigHub001
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12/CATRigLArmDigit13
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22/CATRigLArmDigit23
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32/CATRigLArmDigit33
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42/CATRigLArmDigit43
+        weight: 1
+      - path: Character001
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw/blue
+        weight: 1
+      - path: claw/blue_lit
+        weight: 1
+      - path: claw/green
+        weight: 1
+      - path: claw/green_lit
+        weight: 1
+      - path: claw/handle
+        weight: 1
+      - path: claw/lamp
+        weight: 1
+      - path: claw/red
+        weight: 1
+      - path: claw/red_lit
+        weight: 1
+      - path: claw/separators
+        weight: 1
+      - path: claw/separators_lit
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BLUE
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 46
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CATRigHub001
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit11/CATRigLArmDigit12/CATRigLArmDigit13
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit21/CATRigLArmDigit22/CATRigLArmDigit23
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit31/CATRigLArmDigit32/CATRigLArmDigit33
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42
+        weight: 1
+      - path: CATRigHub001/CATRigLArmCollarbone/CATRigLArm1/CATRigLArm2/CATRigLArmPalm/CATRigLArmDigit41/CATRigLArmDigit42/CATRigLArmDigit43
+        weight: 1
+      - path: Character001
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw/blue
+        weight: 1
+      - path: claw/blue_lit
+        weight: 1
+      - path: claw/green
+        weight: 1
+      - path: claw/green_lit
+        weight: 1
+      - path: claw/handle
+        weight: 1
+      - path: claw/lamp
+        weight: 1
+      - path: claw/red
+        weight: 1
+      - path: claw/red_lit
+        weight: 1
+      - path: claw/separators
+        weight: 1
+      - path: claw/separators_lit
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
