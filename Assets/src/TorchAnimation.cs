@@ -11,7 +11,7 @@ public class TorchAnimation : MonoBehaviour {
 	public Transform blueDestination;
 	public Transform greenDestination;
 
-	float speed = 8.0f;
+	float speed = 12.0f;
 
 	float time = 30;
 

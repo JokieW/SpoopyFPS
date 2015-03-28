@@ -94,7 +94,7 @@ public class Torch : MonoBehaviour {
 	public void Drop()
 	{
 		transform.parent = null;
-		transform.position = new Vector3 (transform.position.x, transform.position.y - 4, transform.position.z);
+		transform.position = new Vector3 (transform.position.x, transform.position.y - 2.5f, transform.position.z);
 		model.SetActive (true);
 		//GetComponent<Rigidbody>().isKinematic = false;
 	}
